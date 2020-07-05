@@ -1,5 +1,17 @@
 **Instructions**
 
+1. clone repository 
+`git clone https://github.com/it14019/profile.git`
+2. install composer
+`composer install
+composer dump-autoload`
+3. create empty database
+4. change `Database.php` values `'database_name' => 'your_database_name'`, `'username' => 'your_username',`,
+`'password' => 'your_password'`
+5. connect to database
+6. create two tables `users` and `users_information`. Make table structure as shown in `mysql_dump.sql` file
+7. run project `php -S localhost:8000`. Make sure the browser is Firefox
+
 **Description**
 
 A simple application with following functionality:
