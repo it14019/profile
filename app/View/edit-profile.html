@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>M | Edit Profile</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="links">
+        <?php echo $userName ?>
+    </div>
+    <div class="header-title">
+        <a href="/profile/edit">
+            <button class="edit-profile-button" type="button">Edit Profile</button>
+        </a>
+    </div>
+    <div class="logout">
+        <form method="post" action="/profile/logout">
+            <button class="logout-button" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<section>
+    <form method="post" action="/profile/update">
+        <div class="edit-profile-container  edit-profile-container-left">
+            <div class="edit-profile-container-left-fields">
+                <label class="edit-profile-label-left" for="name">Name</label><br>
+                <input class="edit-profile-input-text" type="text" id="name" name="name" value="<?php echo $userName ?>"
+                       required><br>
+                <label class="edit-profile-label-left" for="email">E-mail</label><br>
+                <input class="edit-profile-input-text" type="email" id="email" name="email"
+                       value="<?php echo $userMail ?>"
+                       required><br>
+                <label class="edit-profile-label-left" for="birthdate">Birthdate</label><br>
+                <input class="edit-profile-input-text" id="birthdate" type="date" name="birthdate"
+                       value="<?php echo $userBirthDate ?>">
+            </div>
+        </div>
+
+        <div class="edit-profile-container edit-profile-container-right">
+            <label class="edit-profile-label-right" for="gender">Gender</label><br><br>
+            <select class="form-control" id="gender" name="gender">
+                <?php if ($userGender == 'female') { ?>
+                <option value="female" selected>female</option>
+                <option value="male">male</option>
+                <?php } elseif ($userGender == 'male') { ?>
+                <option value="male" selected>male</option>
+                <option value="female">female</option>
+                <?php } else { ?>
+                <option selected disabled>choose gender</option>
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <?php } ?>
+            </select><br><br>
+
+            <label class="edit-profile-label-right" for="description">Description: </label><br><br>
+            <textarea id="description" rows="3" cols="30" maxlength="200" name="description"><?php
+                    if ($userDescription) {
+                        echo $userDescription;
+                    } else {
+                        echo "Type shortly about you";
+                    } ?>
+            </textarea><br><br>
+
+            <div>
+            <?php
+                if ($userAnimal === 'cat') { ?>
+            <input type="checkbox" id="cat" name="animal" value="cat" checked>
+            <label class="edit-profile-label-right" for="cat"> I love cats</label><br>
+            <input type="checkbox" id="dog" name="animal" value="dog">
+            <label class="edit-profile-label-right" for="dog"> I love dogs</label><br>
+            <input type="checkbox" id="both" name="animal" value="both">
+            <label class="edit-profile-label-right" for="both"> I love both</label><br><br>
+            <?php } elseif ($userAnimal === 'dog') { ?>
+            <input type="checkbox" id="cat" name="animal" value="cat">
+            <label class="edit-profile-label-right" for="cat"> I love cats</label><br>
+            <input type="checkbox" id="dog" name="animal" value="dog" checked>
+            <label class="edit-profile-label-right" for="dog"> I love dogs</label><br>
+            <input type="checkbox" id="both" name="animal" value="both">
+            <label class="edit-profile-label-right" for="both"> I love both</label><br><br>
+            <?php } elseif ($userAnimal === 'both') { ?>
+            <input type="checkbox" id="cat" name="animal" value="cat">
+            <label class="edit-profile-label-right" for="cat"> I love cats</label><br>
+            <input type="checkbox" id="dog" name="animal" value="dog">
+            <label class="edit-profile-label-right" for="dog"> I love dogs</label><br>
+            <input type="checkbox" id="both" name="animal" value="both" checked>
+            <label class="edit-profile-label-right" for="both"> I love both</label><br><br>
+            <?php } else { ?>
+            <input type="checkbox" id="cat" name="animal" value="cat">
+            <label class="edit-profile-label-right" for="cat"> I love cats</label><br>
+            <input type="checkbox" id="dog" name="animal" value="dog">
+            <label class="edit-profile-label-right" for="dog"> I love dogs</label><br>
+            <input type="checkbox" id="both" name="animal" value="both">
+            <label class="edit-profile-label-right" for="both"> I love both</label><br><br>
+            <?php } ?>
+            </div>
+            <button class="profile-submit-button" type="submit" value="Submit"> Submit</button>
+        </div>
+    </form>
+</section>
+<footer class="footer">
+    <p>all rights reserved "magebit" 2020.</p>
+</footer>
+</body>
+</html>

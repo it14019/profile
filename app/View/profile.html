@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>M | Profile</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body>
+
+<nav class="nav">
+    <div class="links">
+        <?php echo $userName ?>
+    </div>
+    <div class="header-title">
+        <a href="/profile/edit">
+            <button class="edit-profile-button" type="button">Edit Profile</button>
+        </a>
+    </div>
+    <div class="logout">
+        <form id="logout-form" method="post" action="/profile/logout">
+            <button class="logout-button" type="submit">Logout</button>
+        </form>
+    </div>
+</nav>
+
+<section>
+    <div class="profile-container profile-container-left">
+        <div class="profile-container-left-fields">
+            <h2 class="welcome-title">Hi, <br><?php echo $userName ?>!</h2>
+            <hr class="welcome-line"/>
+        </div>
+    </div>
+    <div class="profile-container profile-container-right">
+        <img src="../../images/logo.png" alt="logo image"/>
+        <h1 class="quote">
+            In case you have not been adequately informed, please consider
+            this official notification that you
+            are SO AWESOME!
+        </h1>
+    </div>
+</section>
+<footer class="footer">
+    <p>all rights reserved "magebit" 2020.</p>
+</footer>
+</body>
+</html>

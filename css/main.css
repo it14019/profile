@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+html, button:hover {
+    cursor: url("../images/cursor.png"), default;
+}
+
+body {
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    animation: animateBg forwards 10s ease-in;
+}
+
+@keyframes animateBg {
+    from {
+        background-size: 100%;
+    }
+    to {
+        background-size: 110%;
+    }
+}
+
+.sign-up-login-container {
+    background-color: rgba(15, 26, 47, 0.9);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    color: #ffffff;
+    display: flex;
+    padding: 60px;
+}
+
+.no-account-text, .account-text {
+    flex: 1 0 50%;
+}
+
+.account-text {
+    margin-left: 8%;
+}
+
+.title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.description {
+    padding-right: 50px;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.description-button, .logout-button, .profile-submit-button {
+    background-color: transparent;
+    border: 2px solid #49abfe;
+    padding: 10px 30px 10px 30px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.profile-submit-button{
+    border: 2px solid rgba(15, 26, 47, 0.9);
+    color: rgba(15, 26, 47, 0.9);
+    margin-top: 15px;
+}
+
+.description-button:hover, .profile-submit-button:hover {
+    background-color:rgba(15, 26, 47, 0.9);
+    color: #ffffff;
+}
+
+.logout-button {
+    background-color: #49abfe;
+    border: 2px solid #49abfe;
+    padding: 10px 30px 10px 30px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.logout-button:hover {
+    background-color: rgba(15, 26, 47, 0.9);
+    border: 2px solid rgba(15, 26, 47, 0.9);
+}
+
+hr {
+    border-color: #49abfe;
+    width: 30px;
+    margin-left: 0;
+}
+
+.login-form-container, .sign-up-container {
+    background-color: #ffffff;
+    width: 33%;
+    position: absolute;
+    top: 20%;
+    height: 60%;
+    left: 50%;
+    overflow: auto;
+}
+
+.sign-up-container {
+    display: none;
+}
+
+.login-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.required {
+    color: red;
+}
+
+.input-email, .email, #name, #email {
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #8495b7;
+}
+
+label {
+    color: #8495b7;
+    font-size: 15px;
+}
+
+.label-container, .title-container {
+    display: inline-block;
+    width: 50%;
+}
+
+.icon-container, .logo {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+.forgot-container {
+    display: inline-block;
+    width: 48%;
+    text-align: right;
+}
+
+#forgot {
+    color: #8495b7;
+    font-size: 15px;
+}
+
+.form-button, .edit-profile-button {
+    background-color: #f89a35;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.form-button:hover, .edit-profile-button:hover {
+    background-color: #f8bf35;
+}
+
+.title-logo-container {
+    margin-bottom: 20px;
+}
+
+.sign-up-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome-container {
+    background-color: rgba(15, 26, 47, 0.9);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    padding: 20px;
+}
+
+.quote {
+    display: inline;
+    margin: 0 auto;
+    vertical-align: middle;
+    font-family: 'Amatic SC', cursive;
+    color: rgba(15, 26, 47, 0.9);
+    font-size: 35px;
+    padding: 40px 15px 20px 15px;
+}
+
+.nav {
+    display: flex;
+    height: 50px;
+    background: white;
+    padding: 10px 30px 10px 30px;
+    overflow: hidden;
+}
+
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logout-form {
+    margin: 0;
+}
+
+.links a {
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.profile-container, .edit-profile-container {
+    position: absolute;
+    overflow: auto;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile-container-right, .edit-profile-container-right {
+    align-items: center;
+    flex-direction: column;
+    top: 25%;
+    left: 40%;
+    background-color: #ffffff;
+    width: 40%;
+    padding: 30px 0 30px 0;
+}
+
+.profile-container-left, .edit-profile-container-left {
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(15, 26, 47, 0.9);
+    width: 70%;
+}
+
+.profile-container-left-fields, .edit-profile-container-left-fields {
+    width: 36%;
+}
+
+.edit-profile-input-text {
+    text-align: center;
+    background: transparent;
+    width: 70%;
+    color: #ffffff;
+}
+
+.welcome-title {
+    margin-top: 0;
+    font-weight: bolder;
+    color: #ffffff;
+    padding: 0 20px 0 20px;
+}
+
+.welcome-line {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    color: #8495b7;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.edit-profile-label-left{
+    color: #49abfe;
+}
+
+.edit-profile-label-right{
+    color: rgba(15, 26, 47, 0.9);
+}
+
+#message {
+    display:none;
+    font-size: 10px;
+}
+
+#message p {
+    margin-top: 0;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+}
