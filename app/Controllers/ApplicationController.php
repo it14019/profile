@@ -15,7 +15,7 @@ class ApplicationController
 
     public function store()
     {
-        User::add(); //ir
+        User::add();
         header('Location: /');
     }
 
